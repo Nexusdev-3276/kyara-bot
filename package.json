@@ -1,0 +1,16 @@
+{
+  "name": "kyara-server-bot",
+  "version": "1.0.0",
+  "description": "Farm gratuit Kyara cote serveur (sans navigateur)",
+  "type": "module",
+  "main": "kyara-bot.mjs",
+  "scripts": {
+    "start": "node kyara-bot.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "undici": "^8.12.4"
+  }
+}
