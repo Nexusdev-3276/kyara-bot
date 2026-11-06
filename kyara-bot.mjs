@@ -668,7 +668,8 @@ async function main() {
         wait = 60 * 1000;
       }
     }
-    await sleep(Math.max(5000, wait));
+    // Pause aleatoire de 5 a 8 minutes entre chaque run.
+    await sleep(300000 + Math.random() * 180000);
   }
 }
 
