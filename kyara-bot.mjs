@@ -652,6 +652,11 @@ async function main() {
     }
   }
 
+  // Optionnel : si tu veux aussi une pause avant le tout premier run au demarrage.
+  const initialDelay = 1800000 + Math.random() * 600000;
+  log(`Premiere attente aleatoire de ${Math.round(initialDelay / 60000)} minutes avant le premier run.`);
+  await sleep(initialDelay);
+
   for (;;) {
     let wait = POLL * 1000;
     try {
@@ -668,8 +673,8 @@ async function main() {
         wait = 60 * 1000;
       }
     }
-    // Pause aleatoire de 5 a 8 minutes entre chaque run.
-    await sleep(300000 + Math.random() * 180000);
+    const randomDelay = 1800000 + Math.random() * 600000;
+    await sleep(randomDelay);
   }
 }
 
